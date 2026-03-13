@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mini Web App</title>
+</head>
+<body>
+    <h1>Log entries</h1>
+    <form method="post" action="/add-log">
+        <input type="text" name="log" placeholder="Enter log"/>
+        <button type="submit">Add</button>
+    </form>
+    <ul>
+    {% for log in logs %}
+        <li>{{ log }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
